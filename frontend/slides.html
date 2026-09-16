@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LumaNest Clean AI Energy</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f0a1e;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .slide {
+    display: none;
+    width: 90vw;
+    max-width: 1000px;
+    height: 56.25vw;
+    max-height: 562px;
+    background: linear-gradient(135deg, #180e33 0%, #0d061f 100%);
+    border: 1px solid #7928ca;
+    border-radius: 16px;
+    padding: 60px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(121,40,202,0.3);
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slide.active { display: flex; }
+  h1 { font-size: 2.6rem; color: #00ffcc; margin-bottom: 20px; font-weight: 800; }
+  h3 { font-size: 1.4rem; color: #b026ff; margin-bottom: 24px; }
+  ul { list-style-type: none; margin-top: 10px; }
+  li { font-size: 1.25rem; color: #e2e8f0; margin-bottom: 14px; display: flex; align-items: center; }
+  li::before { content: '✦'; color: #00ffcc; margin-right: 14px; font-weight: bold; }
+  .nav {
+    position: fixed;
+    bottom: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  button {
+    background: #7928ca;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  button:hover { background: #00ffcc; color: #000; }
+  .counter { color: #a0aec0; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+  <div class="slide active">
+    <h1>LumaNest Clean AI Energy</h1>
+    <h3>Executive Presentation & Pitch Deck</h3>
+    <p style="color: #a0aec0; font-size: 1.1rem;">Use Left / Right arrow keys to navigate slides</p>
+  </div>
+  <div class="slide">
+    <h1>1. Executive Summary & Problem</h1>
+    <ul>
+      <li>Market friction identified in enterprise operations</li>
+      <li>Rapid unit-economic inflection point</li>
+      <li>Strategic differentiation vs incumbent solutions</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>2. Market Opportunity (TAM / SOM)</h1>
+    <ul>
+      <li>Addressable Market: Multi-billion dollar verified cohort</li>
+      <li>Scalable margins with recurring contract dynamics</li>
+      <li>Defensible competitive whitespace</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>3. Product Architecture & Traction</h1>
+    <ul>
+      <li>Autonomous verification pipeline</li>
+      <li>Zero-latency delivery & deterministic contracts</li>
+      <li>Continuous execution and measurable ROI</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>4. Financial Plan & Projections</h1>
+    <ul>
+      <li>Sustainable gross margin model</li>
+      <li>Positive unit economics from first cohort</li>
+      <li>Disciplined growth with measurable CAC/LTV</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>5. Conclusion & Next Steps</h1>
+    <ul>
+      <li>Production readiness certified</li>
+      <li>Ready for immediate partner integration</li>
+      <li>Exportable to .pptx and .pdf for distribution</li>
+    </ul>
+  </div>
+
+  <div class="nav">
+    <button onclick="prevSlide()">◀ Previous</button>
+    <span class="counter" id="counter">Slide 1 of 6</span>
+    <button onclick="nextSlide()">Next ▶</button>
+  </div>
+
+  <script>
+    let cur = 0;
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('counter');
+    function update() {
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === cur));
+      counter.innerText = `Slide ${cur + 1} of ${slides.length}`;
+    }
+    function nextSlide() { if (cur < slides.length - 1) { cur++; update(); } }
+    function prevSlide() { if (cur > 0) { cur--; update(); } }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
