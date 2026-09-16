@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgb(10,35,20)"/>
+      <stop offset="100%" stop-color="rgb(30,100,60)"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" rx="20" fill="url(#bg)" stroke="#6ee7b7" stroke-width="2"/>
+  <circle cx="500" cy="80" r="110" fill="none" stroke="#6ee7b7" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="50" y="80" fill="#6ee7b7" font-size="14" font-family="'DejaVu Sans', sans-serif" font-weight="700">KASHMAKR VERIFIED PRODUCT</text>
+  <text x="50" y="135" fill="#ffffff" font-size="24" font-family="'DejaVu Sans', sans-serif" font-weight="700">LumaNest Clean AI Energy</text>
+  <text x="50" y="175" fill="rgba(255,255,255,0.75)" font-size="14" font-family="'DejaVu Sans', sans-serif">Autonomous Eco Efficiency</text>
+  <text x="50" y="240" fill="#6ee7b7" font-size="12" font-family="'DejaVu Sans', sans-serif">Cohort Deliverable presentation</text>
+</svg>
